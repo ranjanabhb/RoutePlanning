@@ -108,8 +108,6 @@ public abstract List<Integer> getNeighbors(int v);
  */
 public abstract List<Integer> getInNeighbors(int v);
 
-
-
 /** 
  * The degree sequence of a graph is a sorted (organized in numerical order 
  * from largest to smallest, possibly with repetitions) list of the degrees 
@@ -147,7 +145,6 @@ public String toString() {
  */
 public abstract String adjacencyString();
 
-
 // The next methods implement labeled vertices.
 // Basic graphs may or may not have labeled vertices.
 
@@ -184,8 +181,7 @@ public boolean hasVertex(String s) {
  * @param The label to be assigned to this vertex.
  */
 public void addLabel(int v, String s) {
-    if (v < getNumVertices() && !vertexLabels.containsKey(v)) 
-    {
+    if (v < getNumVertices() && !vertexLabels.containsKey(v)) {
         vertexLabels.put(v, s);
     } else {
         System.out.println("ERROR: tried to label a vertex that "
@@ -223,8 +219,8 @@ public int getIndex(String s) {
 
 
 public static void main (String[] args) {
-    GraphLoader.createIntersectionsFile("data/maps/myucsd.map", 
-                                        "data/intersections/myucsd.intersections");
+//    GraphLoader.createIntersectionsFile("data/maps/myucsd.map", 
+//                                        "data/intersections/myucsd.intersections");
 
 
     // For testing of Part 1 functionality
